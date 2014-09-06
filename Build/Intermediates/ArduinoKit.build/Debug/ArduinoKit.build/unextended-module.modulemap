@@ -1,0 +1,6 @@
+framework module ArduinoKit {
+  umbrella header "ArduinoKit.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,10 @@
+framework module ArduinoKit {
+  umbrella header "ArduinoKit.h"
+
+  export *
+  module * { export * }
+}
+
+module ArduinoKit.Swift {
+    header "ArduinoKit-Swift.h"
+}

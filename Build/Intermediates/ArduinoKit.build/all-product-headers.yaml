@@ -1,0 +1,22 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ArduinoKit.h",
+          'external-contents': "/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/ArduinoKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "Import.h",
+          'external-contents': "/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Import.h"
+        }
+      ]
+    }
+  ]
+}

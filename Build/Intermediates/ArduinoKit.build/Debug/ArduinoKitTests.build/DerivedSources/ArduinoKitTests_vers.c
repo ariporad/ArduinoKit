@@ -1,0 +1,1 @@
+ const unsigned char ArduinoKitTestsVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:ArduinoKitTests  PROJECT:ArduinoKit-1" "\n"; const double ArduinoKitTestsVersionNumber __attribute__ ((used)) = (double)1.;
