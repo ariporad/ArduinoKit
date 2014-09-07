@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF64537019BD0CF6001EF639 /* ArduinoKit-Briging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = BF64536F19BD0CF6001EF639 /* ArduinoKit-Briging-Header.h */; };
 		BF93201D19BBDEBC0099D9A3 /* ArduinoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BF93201C19BBDEBC0099D9A3 /* ArduinoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF93202319BBDEBC0099D9A3 /* ArduinoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF93201719BBDEBC0099D9A3 /* ArduinoKit.framework */; };
 		BF93202A19BBDEBC0099D9A3 /* ArduinoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93202919BBDEBC0099D9A3 /* ArduinoKitTests.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF64536F19BD0CF6001EF639 /* ArduinoKit-Briging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ArduinoKit-Briging-Header.h"; sourceTree = "<group>"; };
 		BF93201719BBDEBC0099D9A3 /* ArduinoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArduinoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF93201B19BBDEBC0099D9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF93201C19BBDEBC0099D9A3 /* ArduinoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduinoKit.h; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				BF93203819BBE0DA0099D9A3 /* Import.h */,
 				BF93203919BBE0DA0099D9A3 /* Import.m */,
 				BF93201B19BBDEBC0099D9A3 /* Info.plist */,
+				BF64536F19BD0CF6001EF639 /* ArduinoKit-Briging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				BF93205119BCBE440099D9A3 /* ORSSerialPort.h in Headers */,
 				BF93201D19BBDEBC0099D9A3 /* ArduinoKit.h in Headers */,
 				BF93203A19BBE0DA0099D9A3 /* Import.h in Headers */,
+				BF64537019BD0CF6001EF639 /* ArduinoKit-Briging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ArduinoKit-Briging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -395,6 +400,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ArduinoKit-Briging-Header.h";
 			};
 			name = Release;
 		};
@@ -451,6 +457,7 @@
 				BF93202F19BBDEBC0099D9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF93203019BBDEBC0099D9A3 /* Build configuration list for PBXNativeTarget "ArduinoKitTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +466,7 @@
 				BF93203219BBDEBC0099D9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -3,6 +3,8 @@ v7
 r1
 cCheck dependencies
 cCompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler
+cDitto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h
+cDitto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule
 
 CBuild AST from /Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Import.m
 r0
@@ -18,7 +20,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesf8188c44bebcb941^52f29244bebcb941^---0#1#1#--18"Check dependencies36"FD94C7B1-DC82-40EE-BE03-DB885AC144E3-
+lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesfe2b530b0dbdb941^5e2d570b0dbdb941^---0#1#1#--18"Check dependencies36"ED3125E9-6302-470F-B25E-17AB3459D469-
 
 CCompileC /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit_vers.o /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/DerivedSources/ArduinoKit_vers.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
 s431743302.873033
@@ -62,9 +64,9 @@ CCompileC /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debu
 r0
 
 CCompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler
-s431799876.574396
-e431799876.699696
-r0
+s431820041.251962
+e431820041.465303
+r1
 xCompileSwift
 xnormal
 xx86_64
@@ -74,14 +76,8 @@ d/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/Arduino
 d/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/ArduinoKit.swift
 d/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift
 d/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/ArduinoKit.h
-o/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift:11:8: error: no such module 'sys'
-oimport sys
-o       ^
-o/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift:11:8: error: no such module 'sys'
-oimport sys
-o       ^
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection26"Compile Swift source files63"CompileSwift normal x86_64 com.apple.xcode.tools.swift.compilerd6199344bebcb941^672cb644bebcb941^-248"/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift:11:8: error: no such module 'sys'import sys       ^/Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift:11:8: error: no such module 'sys'import sys       ^1(36%IDEClangDiagnosticActivityLogMessage2@20"No such module 'sys'-431799876#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@76"file:///Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift0000000000000000^10#7#10#7#0#0#1#20"Swift Compiler Error--0#0#1#--2347"CompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler    cd /Users/School/Dev/ArduinoKit/ArduinoKit    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -target x86_64-apple-macosx10.10 -module-name ArduinoKit -O0 -sdk /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -g -module-cache-path /Users/School/Dev/ArduinoKit/Build/ModuleCache -I /Users/School/Dev/ArduinoKit/Build/Products/Debug -F /Users/School/Dev/ArduinoKit/Build/Products/Debug -c -j4 /Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift /Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/ArduinoKit.swift -output-file-map /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-OutputFileMap.json -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule -Xcc -iquote -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/ArduinoKit-generated-files.hmap -Xcc -I/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/ArduinoKit-own-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/ArduinoKit-project-headers.hmap -Xcc -I/Users/School/Dev/ArduinoKit/Build/Products/Debug/include -Xcc -I/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Xcc -I/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/DerivedSources/x86_64 -Xcc -I/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/DerivedSources -Xcc -DDEBUG=1 -emit-objc-header -emit-objc-header-path /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h -import-underlying-module -Xcc -ivfsoverlay -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/unextended-module-overlay.yaml36"D5694F0C-525B-463F-9681-BA16334AB4F1-
-b6030C6A5-B5B4-499D-ADB5-2A442583127F
+lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection26"Compile Swift source files63"CompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler7a8e40090dbdb941^bc1f77090dbdb941^---0#0#1#--2347"CompileSwift normal x86_64 com.apple.xcode.tools.swift.compiler    cd /Users/School/Dev/ArduinoKit/ArduinoKit    /Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -target x86_64-apple-macosx10.10 -module-name ArduinoKit -O0 -sdk /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -g -module-cache-path /Users/School/Dev/ArduinoKit/Build/ModuleCache -I /Users/School/Dev/ArduinoKit/Build/Products/Debug -F /Users/School/Dev/ArduinoKit/Build/Products/Debug -c -j4 /Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/Communicator.swift /Users/School/Dev/ArduinoKit/ArduinoKit/ArduinoKit/ArduinoKit.swift -output-file-map /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-OutputFileMap.json -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule -Xcc -iquote -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/ArduinoKit-generated-files.hmap -Xcc -I/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/ArduinoKit-own-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/ArduinoKit-project-headers.hmap -Xcc -I/Users/School/Dev/ArduinoKit/Build/Products/Debug/include -Xcc -I/Applications/Xcode6-Beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Xcc -I/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/DerivedSources/x86_64 -Xcc -I/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/DerivedSources -Xcc -DDEBUG=1 -emit-objc-header -emit-objc-header-path /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h -import-underlying-module -Xcc -ivfsoverlay -Xcc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/unextended-module-overlay.yaml36"8CE98EB8-1B3C-46F9-93F6-49D02C49DD31-
+b414A3706-3871-4298-AC53-26FE8A659916
 
 CCopySwiftLibs /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework
 s431743304.023569
@@ -123,24 +119,24 @@ lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy /U
 b77F8CC17-AE4A-485D-8CC7-0CADD6ED2B7B
 
 CDitto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h
-s431798153.310483
-e431798153.322054
+s431820041.466013
+e431820041.476613
 r1
 xDitto
 x/Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h
 x/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Copy /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h244"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.ha5854f89b7bcb941^eb725289b7bcb941^---0#0#1#-19%DVTDocumentLocation2@115"file:///Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h0000000000000000^556"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h    cd /Users/School/Dev/ArduinoKit/ArduinoKit    /usr/bin/ditto -rsrc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h36"36362659-ECE3-4812-9ED4-3C0644CE2552-
-b45A95F05-C9B7-451C-8077-557BF3EC754B
+lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Copy /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h244"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.hda5677090dbdb941^d5037a090dbdb941^---0#0#1#-19%DVTDocumentLocation2@115"file:///Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h0000000000000000^556"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h    cd /Users/School/Dev/ArduinoKit/ArduinoKit    /usr/bin/ditto -rsrc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit-Swift.h /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Headers/ArduinoKit-Swift.h36"B1C69D1F-99B7-4247-8A0A-526632604473-
+b414A3706-3871-4298-AC53-26FE8A659916
 
 CDitto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule
-s431798153.322502
-e431798153.333154
+s431820041.477092
+e431820041.486297
 r1
 xDitto
 x/Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule
 x/Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule
-lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection16"Copy swiftmodule271"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodulea29a5289b7bcb941^73495589b7bcb941^---0#0#1#-19%DVTDocumentLocation2@138"file:///Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule0000000000000000^610"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule    cd /Users/School/Dev/ArduinoKit/ArduinoKit    /usr/bin/ditto -rsrc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule36"AEB6FB72-24CD-4552-80F6-3FB0953D0DE4-
-b45A95F05-C9B7-451C-8077-557BF3EC754B
+lSLF07#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection16"Copy swiftmodule271"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule842d7a090dbdb941^287e7c090dbdb941^---0#0#1#-19%DVTDocumentLocation2@138"file:///Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule0000000000000000^610"Ditto /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule    cd /Users/School/Dev/ArduinoKit/ArduinoKit    /usr/bin/ditto -rsrc /Users/School/Dev/ArduinoKit/Build/Intermediates/ArduinoKit.build/Debug/ArduinoKit.build/Objects-normal/x86_64/ArduinoKit.swiftmodule /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/Modules/ArduinoKit.swiftmodule/x86_64.swiftmodule36"76D7ED26-4770-4C87-B68A-A2B2519315B9-
+b414A3706-3871-4298-AC53-26FE8A659916
 
 CLd /Users/School/Dev/ArduinoKit/Build/Products/Debug/ArduinoKit.framework/Versions/A/ArduinoKit normal x86_64
 s431743303.969875
