@@ -13,6 +13,11 @@
 		BF93203419BBDF110099D9A3 /* ArduinoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93203319BBDF110099D9A3 /* ArduinoKit.swift */; };
 		BF93203A19BBE0DA0099D9A3 /* Import.h in Headers */ = {isa = PBXBuildFile; fileRef = BF93203819BBE0DA0099D9A3 /* Import.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF93203B19BBE0DA0099D9A3 /* Import.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93203919BBE0DA0099D9A3 /* Import.m */; };
+		BF93203D19BCB6DB0099D9A3 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF93203C19BCB6DB0099D9A3 /* Communicator.swift */; };
+		BF93205119BCBE440099D9A3 /* ORSSerialPort.h in Headers */ = {isa = PBXBuildFile; fileRef = BF93204D19BCBE440099D9A3 /* ORSSerialPort.h */; };
+		BF93205219BCBE440099D9A3 /* ORSSerialPort.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93204E19BCBE440099D9A3 /* ORSSerialPort.m */; };
+		BF93205319BCBE440099D9A3 /* ORSSerialPortManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF93204F19BCBE440099D9A3 /* ORSSerialPortManager.h */; };
+		BF93205419BCBE440099D9A3 /* ORSSerialPortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF93205019BCBE440099D9A3 /* ORSSerialPortManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,11 @@
 		BF93203319BBDF110099D9A3 /* ArduinoKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArduinoKit.swift; sourceTree = "<group>"; };
 		BF93203819BBE0DA0099D9A3 /* Import.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Import.h; sourceTree = "<group>"; };
 		BF93203919BBE0DA0099D9A3 /* Import.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Import.m; sourceTree = "<group>"; };
+		BF93203C19BCB6DB0099D9A3 /* Communicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		BF93204D19BCBE440099D9A3 /* ORSSerialPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialPort.h; sourceTree = "<group>"; };
+		BF93204E19BCBE440099D9A3 /* ORSSerialPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPort.m; sourceTree = "<group>"; };
+		BF93204F19BCBE440099D9A3 /* ORSSerialPortManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSerialPortManager.h; sourceTree = "<group>"; };
+		BF93205019BCBE440099D9A3 /* ORSSerialPortManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSerialPortManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +87,9 @@
 		BF93201919BBDEBC0099D9A3 /* ArduinoKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF93204B19BCBE130099D9A3 /* Frameworks */,
 				BF93203319BBDF110099D9A3 /* ArduinoKit.swift */,
+				BF93203C19BCB6DB0099D9A3 /* Communicator.swift */,
 				BF93201A19BBDEBC0099D9A3 /* Supporting Files */,
 			);
 			path = ArduinoKit;
@@ -111,6 +123,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BF93204B19BCBE130099D9A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF93204C19BCBE290099D9A3 /* ORSSerialPort */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF93204C19BCBE290099D9A3 /* ORSSerialPort */ = {
+			isa = PBXGroup;
+			children = (
+				BF93204D19BCBE440099D9A3 /* ORSSerialPort.h */,
+				BF93204E19BCBE440099D9A3 /* ORSSerialPort.m */,
+				BF93204F19BCBE440099D9A3 /* ORSSerialPortManager.h */,
+				BF93205019BCBE440099D9A3 /* ORSSerialPortManager.m */,
+			);
+			name = ORSSerialPort;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -118,6 +149,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF93205319BCBE440099D9A3 /* ORSSerialPortManager.h in Headers */,
+				BF93205119BCBE440099D9A3 /* ORSSerialPort.h in Headers */,
 				BF93201D19BBDEBC0099D9A3 /* ArduinoKit.h in Headers */,
 				BF93203A19BBE0DA0099D9A3 /* Import.h in Headers */,
 			);
@@ -220,8 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF93203D19BCB6DB0099D9A3 /* Communicator.swift in Sources */,
 				BF93203B19BBE0DA0099D9A3 /* Import.m in Sources */,
+				BF93205419BCBE440099D9A3 /* ORSSerialPortManager.m in Sources */,
 				BF93203419BBDF110099D9A3 /* ArduinoKit.swift in Sources */,
+				BF93205219BCBE440099D9A3 /* ORSSerialPort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
