@@ -3,23 +3,42 @@
 #include <EEPROM.h>
 
 #define HEARTBEAT_TRIGGER_TIME 700
-#define HEARTBEAT_CUTOFF_TIME 115
+#define HEARTBEAT_CUTOFF_TIME 1150
 
 const int PIN_MODES[3] = { OUTPUT, INPUT, INPUT_PULLUP };
 const int A_PINS[6]    = { A0, A1, A2, A3, A4, A5 };
+const int D_PINS[14]    = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
 const int D_STATES[2]  = { LOW, HIGH };
-int hearbeat_received_at = millis();
+int heartbeat_received_at = millis();
+int heartbeat_sent_at = millis();
 
 void setup() {
-	Serial.begin(9600);
-	connect();
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+  connect();
 }
 
 char data[9];
 int index = 0;
 
 void loop() {
+  if((millis() - heartbeat_received_at) > (HEARTBEAT_CUTOFF_TIME * 3)){
+//    connect(); // Dissconnected, So Connect.
+  }
+  if(millis() - heartbeat_sent_at > HEARTBEAT_TRIGGER_TIME){
+    sendHeartbeat();
+  }
   if(Serial.peek() != -1){
+    if (Serial.peek() == 'h'){
+      Serial.read();
+      parseInput("h");
+      return;
+    }
+    if (Serial.peek() == '-'){
+      Serial.read();
+      parseInput("-");
+      return;
+    }
     if (Serial.peek() == ';'){
       Serial.read();
       parseInput(data);
@@ -28,45 +47,55 @@ void loop() {
     } else {
       data[index] = Serial.read();
       index++;
-      Serial.println(data);
     }
   }
 }
 
 void connect() {
+        setAllPinsToLow(2); // Start with 2, because 1 & 0 are being used for Serial.
 	while(!Serial.available()) {
-	    Serial.println("ArduinoKit;");
+            digitalWrite(13, LOW);
+            delay(50);
+	    Serial.println("ArduinoKit");
+            digitalWrite(13, HIGH);
+            delay(50);
 	}
-	Serial.read();
-	Serial.print(EEPROM.read(0));
-        Serial.println(";");
-	Serial.print("-");
-        Serial.println(";");
-	hearbeat_received_at = millis();
+	if (Serial.read() != '-') {
+          connect();
+          return;
+        }
+	Serial.println(EEPROM.read(0));
+	Serial.println("-");
+	heartbeat_received_at = millis();
+	heartbeat_sent_at = millis();
 }
 
 void parseInput(char* input){
         char firstChar = (input[0]);
 	if(firstChar == '-'){
-            Serial.println("diss");
 	    connect();
-	} else if(firstChar == '0'){
-            Serial.println("beat");
+	} else if(firstChar == 'h'){
 	    heartbeat();
-	} else if(firstChar == '1'){
-            Serial.println("cmd");
+	} else if(firstChar == '0'){
 	    parseCommand(input);
-	} else if(firstChar == '2'){
-            Serial.println("pmd");
+	} else if(firstChar == '1'){
 	    parsePinMode(input);
-	} else {
-            Serial.println("else");
-            Serial.println(firstChar);
-        }
+	}
 }
 
 void heartbeat() {
-	hearbeat_received_at = millis();
+  heartbeat_received_at = millis(); 
+}
+
+void sendHeartbeat() {
+  Serial.println("h");
+  heartbeat_sent_at = millis();
+}
+
+void setAllPinsToLow(int startingPin){
+  for(int i = startingPin; i < sizeof(D_PINS) - 1; i++) {
+    digitalWrite(D_PINS[i], LOW);
+  }
 }
 
 void parseCommand(char* command) {
@@ -77,16 +106,9 @@ void parseCommand(char* command) {
 	if(w){
 	    char valueStr[5] = {(command[5]), (command[6]), (command[7]), (command[8]), 0};
 	    int newValue = atoi(valueStr);
-            Serial.print("I am going to write ");
-            Serial.print(newValue);
-            Serial.print(" to ");
-            Serial.print(((digital) ? "digital" : "anolouge"));
-            Serial.print(" pin ");
-	    Serial.println(pin);
             (digital) ? digitalWrite(pin, D_STATES[newValue]) : analogWrite(pin, newValue/4);
 	} else {
-	    Serial.print((digital) ? digitalRead(pin) : analogRead(A_PINS[pin]));
-            Serial.println(";");
+	    Serial.println((digital) ? digitalRead(pin) : analogRead(A_PINS[pin]));
 	}
 }
 

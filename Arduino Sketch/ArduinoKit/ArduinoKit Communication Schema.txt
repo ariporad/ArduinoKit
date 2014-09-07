@@ -1,13 +1,13 @@
 ArduinoKit Communication Schema
 
-All Communication must end with a ";", All communication to the Master must have a newline after ";", for communication to the Slave it is optional.
+All Communications to the Slave must end with a ";", All communication to the Master must end with a newline.
 
 To Initalize Connection:
-Slave  (Arduino) : [On Loop] "ArduinoKit;"
+Slave  (Arduino) : [On Loop] "ArduinoKit"
 Master (Computer): "-"
-Slave: "[id];" 
-Slave: "-;"
-Now standard commands may be sent using syntax below. Always send a heartbeat at least once per second. After 3 missed heartbeats Slave will assume dissconnected. Slave will send heartbeat "0;" at least once per second. After 3 missed heartbeats assume dissconnected.
+Slave: "[id]" 
+Slave: "-"
+Now standard commands may be sent using syntax below. Always send a heartbeat at least once per second (heartbeat is "h", note no newline or semicolon). After 3 missed heartbeats Slave will assume dissconnected. Slave will send heartbeat "h" at least once per second. After 3 missed heartbeats assume dissconnected.
 
 To Close Connection:
 Master: "-"
@@ -17,9 +17,8 @@ Connection is now closed. Slave assumes Dissconnected State.
 Standard Command:
 {A}[{B}{C}{D}[{E}]];
 
-A: 0 = HeartBeat, must be sent once per second. Rest of line is blank.
-   1 = Command, Must have B, C, D, E only if B = 1.
-   2 = Pin Mode, Must have B, C, rest of line is blank.
+A: 0 = Command, Must have B, C, D, E only if B = 1.
+   1 = Pin Mode, Must have B, C, rest of line is blank.
 
 B: For A = 1: 0 = Read, 1 = Write
    For A = 2: XX Pin Number, Int. Must be two digits.
@@ -37,4 +36,4 @@ All lines must end with a newline ("\n")
 
 Any commands not understood will be ignored.
 
-110130000;
+110120001;
