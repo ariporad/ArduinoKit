@@ -1,0 +1,36 @@
+ArduinoKit Communication Schema
+
+To Initalize Connection:
+Slave  (Arduino) : [On Loop] "ArduinoKit\n"
+Master (Computer): "-\n"
+Slave: "[id]\n" 
+Slave: "-\n"
+Now standard commands may be sent using syntax below. Always send a heartbeat at least once per second. After 3 missed heartbeats Slave will assume dissconnected. Slave will send heartbeat "0\n" at least once per second. After 3 missed heartbeats assume dissconnected.
+
+To Close Connection:
+Master: "-"
+
+Connection is now closed. Slave assumes Dissconnected State.
+
+Standard Command:
+{A}[{B}{C}{D}[{E}]]\n
+
+A: 0 = HeartBeat, must be sent once per second. Rest of line is blank.
+   1 = Command, Must have B, C, D, E only if B = 1.
+   2 = Pin Mode, Must have B, C, rest of line is blank.
+
+B: For A = 1: 0 = Read, 1 = Write
+   For A = 2: XX Pin Number, Int. Must be two digits.
+
+C: For A = 1: 0 = Digital 1 = Analouge
+   For A = 2: 0 = Output  1 = Input  2 = Input Pullup
+
+D: XX Pin Number, Int. Must be two digits
+
+E: Only Required if B = 1, Value to write. If C = 1, must be number between 0000 and 1023, otherwise 0000 for off/false, and 0001 for on/true, Int. Must be four digits.
+
+The Slave may respond to, but may not send a standard command. A response will be an integer on it's own line.
+
+All lines must end with a newline ("\n")
+
+Any commands not understood will be ignored.
